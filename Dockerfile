@@ -6,7 +6,7 @@ WORKDIR /app
 
 # Copy the image file and the script into the container
 COPY image.jpg image.jpg          # Ensure 'image.jpg' is in the same directory as the Dockerfile
-COPY script.py script.py          # Assuming the script is named 'script.py'
+COPY main.py main.py          # Assuming the script is named 'script.py'
 
 # Install OpenCV and necessary Python libraries
 RUN pip install opencv-python-headless numpy
@@ -15,4 +15,4 @@ RUN pip install opencv-python-headless numpy
 RUN mkdir output_images
 
 # Command to run the script
-CMD ["python", "script.py"]
+CMD ["python", "main.py"]
