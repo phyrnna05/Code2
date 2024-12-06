@@ -5,8 +5,11 @@ FROM python:3.10-slim
 WORKDIR /app
 
 # Copy the image file and the script into the container
-COPY image.jpg image.jpg          # Ensure 'image.jpg' is in the same directory as the Dockerfile
-COPY main.py main.py          # Assuming the script is named 'script.py'
+COPY image.jpg image.jpg          
+# Ensure 'image.jpg' is in the same directory as the Dockerfile
+COPY main.py main.py          
+
+# Assuming the script is named 'script.py'
 
 # Install OpenCV and necessary Python libraries
 RUN pip install opencv-python-headless numpy
